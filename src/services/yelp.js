@@ -1,6 +1,4 @@
 export async function fetchBusinesses(zip = '97302', search = '') {
-  console.log('zip', zip);
-  console.log('search', search);
   const params = new URLSearchParams();
   params.set('zip', zip);
   params.set('search', search);
@@ -8,6 +6,6 @@ export async function fetchBusinesses(zip = '97302', search = '') {
     headers: { Accept: 'application/json' },
   });
   const data = await resp.json();
-  console.log('data', data);
+
   return data;
 }

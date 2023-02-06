@@ -13,18 +13,14 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchBusinesses(zip, search);
+      const data = await fetchBusinesses();
       setBusinesses(data);
       setLoading(false);
     };
     fetchData();
-  }, [zip, search]);
+  }, []);
 
   // TODO -- add event for button click to handle calling fetchBusinesses with zip / search
-  const searchRestaurants = async () => {
-    const bizData = await fetchBusinesses(zip, search);
-    setBusinesses(bizData);
-  };
 
   return (
     <div className="App">
@@ -48,7 +44,14 @@ function App() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <button onClick={searchRestaurants}>Search</button>
+        <button
+          onClick={async () => {
+            const resp = await fetchBusinesses(zip, search);
+            setBusinesses(resp);
+          }}
+        >
+          Search
+        </button>
       </div>
       {loading && <div className="loader"></div>}
       {!loading && businesses.map((b) => <RestaurantListItem key={b.id} {...b} />)}
