@@ -6,6 +6,7 @@ import { fetchBusinesses } from './services/yelp';
 function App() {
   const [businesses, setBusinesses] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const [zip, setZip] = useState('');
   const [search, setSearch] = useState('');
 

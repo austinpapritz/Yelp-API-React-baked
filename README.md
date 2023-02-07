@@ -31,3 +31,21 @@ For this deliverable, you will be setting up a netlify function to proxy the Yel
 
 - Add React Router and make pages for specific categories like restaurants, hiking trails, movie theatres etc. (see the list of [categories here](https://www.yelp.com/developers/documentation/v3/all_category_list)) -- update your netlify function to search for different categories
 - Add another API such as the Movie DB and display results
+
+This is the adventure of Noah and Austin
+
+copy 404 error, can't fetch
+recloned template exactly
+explain half-baked: I only wrote like 10 lines of code
+Someone else has gotten it to work
+Clone down Rio's, DOES NOT WORK, broken in same way
+Troubleshoot the above with other systems
+Might need to get Netlify installed on computers
+Installed netlify globally
+Google netlify “serverless function” for Windows
+
+https://docs.netlify.com/functions/optional-configuration/?fn-language=js
+
+https://answers.netlify.com/t/netlify-dev-function-returns-404-when-using-functions-functionname-index-js-syntax-instead-of-functions-functionname-js/24124
+
+https://docs.netlify.com/cli/get-started/?_ga=2.149832948.396875205.1675734537-1255873659.1675734537
